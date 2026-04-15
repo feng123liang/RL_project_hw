@@ -1,0 +1,33 @@
+seed: 42
+
+environment:
+  rows: 6
+  cols: 6
+  start: [0, 0]
+  goal: [5, 5]
+  obstacles:
+    - [1, 1]
+    - [1, 2]
+    - [2, 2]
+    - [3, 2]
+    - [4, 3]
+  rewards:
+    step: -1
+    invalid: -5
+    goal: 50
+  max_steps: 100
+
+agent:
+  alpha: 0.1
+  gamma: 0.95
+  epsilon: 1.0
+  epsilon_min: 0.05
+  epsilon_decay: 0.995
+
+training:
+  episodes: 2000
+
+paths:
+  models_dir: results/models
+  logs_dir: results/logs
+  figures_dir: results/figures
