@@ -1,5 +1,11 @@
 from __future__ import annotations
 
+"""评估入口。
+
+该文件负责加载训练好的 Q 表，并在评估阶段使用纯贪心策略运行多个 episode，
+统计成功率、平均奖励和成功 episode 的平均步数。
+"""
+
 import argparse
 import os
 from typing import Dict
@@ -12,11 +18,19 @@ from utils import ensure_dir, save_json
 
 
 def load_config(config_path: str) -> Dict:
+    """读取 YAML 配置文件。"""
+
     with open(config_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
 
 def evaluate(config_path: str, episodes: int) -> Dict:
+    """加载已训练模型并执行多轮评估。
+
+    与训练阶段不同，这里不再探索，也不更新 Q 表，
+    每一步都直接选择当前状态下 Q 值最大的动作。
+    """
+
     cfg = load_config(config_path)
     env = build_env(cfg)
 
@@ -69,6 +83,8 @@ def evaluate(config_path: str, episodes: int) -> Dict:
 
 
 def main() -> None:
+    """解析命令行参数并启动评估。"""
+
     parser = argparse.ArgumentParser(description="Evaluate Q-learning baseline")
     parser.add_argument("--config", type=str, default="configs/base.yaml", help="Path to yaml config")
     parser.add_argument("--episodes", type=int, default=200, help="Number of evaluation episodes")

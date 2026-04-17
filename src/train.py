@@ -1,5 +1,11 @@
 from __future__ import annotations
 
+"""训练入口。
+
+该文件负责把配置、环境、智能体、训练循环、结果保存和训练后可视化串起来，
+是整个 baseline 的主流程入口。
+"""
+
 import argparse
 import os
 from typing import Dict, List
@@ -14,11 +20,15 @@ from visualize import plot_final_path, plot_training_curves
 
 
 def load_config(config_path: str) -> Dict:
+    """读取 YAML 配置文件。"""
+
     with open(config_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
 
 def build_env(cfg: Dict) -> GridWorldEnv:
+    """根据配置字典构建 GridWorld 环境实例。"""
+
     ecfg = cfg["environment"]
     rcfg = ecfg["rewards"]
     return GridWorldEnv(
@@ -33,6 +43,8 @@ def build_env(cfg: Dict) -> GridWorldEnv:
 
 
 def build_agent(cfg: Dict, env: GridWorldEnv) -> QLearningAgent:
+    """根据配置和环境尺寸构建 Q-learning 智能体。"""
+
     acfg = cfg["agent"]
     return QLearningAgent(
         rows=env.rows,
@@ -47,6 +59,14 @@ def build_agent(cfg: Dict, env: GridWorldEnv) -> QLearningAgent:
 
 
 def train(cfg: Dict) -> Dict[str, List[float]]:
+    """执行完整训练流程并保存模型、日志和图像结果。
+
+    训练中每个 episode 都会：
+    - 从起点开始与环境交互
+    - 用 Q-learning 公式更新 Q 表
+    - 记录奖励、成功率、成功时步数等指标
+    """
+
     seed_everything(cfg["seed"])
 
     env = build_env(cfg)
@@ -67,6 +87,7 @@ def train(cfg: Dict) -> Dict[str, List[float]]:
         ep_steps = 0
         reached_goal = False
 
+        # 单个 episode 内持续交互，直到到达目标或触发时间上限。
         while not done:
             action = agent.select_action(state, greedy=False)
             next_state, reward, done, info = env.step(action)
@@ -102,6 +123,7 @@ def train(cfg: Dict) -> Dict[str, List[float]]:
     avg_steps_curve = []
     running_success = 0
     running_steps = 0
+    # 只在成功 episode 上统计平均步数，避免失败轨迹干扰该指标。
     for i, s in enumerate(success_flags):
         if s == 1:
             running_success += 1
@@ -143,6 +165,8 @@ def train(cfg: Dict) -> Dict[str, List[float]]:
 
 
 def main() -> None:
+    """解析命令行参数并启动训练。"""
+
     parser = argparse.ArgumentParser(description="Train Q-learning baseline in GridWorld")
     parser.add_argument("--config", type=str, default="configs/base.yaml", help="Path to yaml config")
     args = parser.parse_args()

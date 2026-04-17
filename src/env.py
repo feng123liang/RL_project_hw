@@ -1,5 +1,14 @@
 from __future__ import annotations
 
+"""GridWorld 环境定义。
+
+该文件负责描述机器人送货任务所处的二维网格世界，包括：
+- 状态与动作的表示方式
+- 越界/撞障碍时的转移规则
+- 到达目标、非法移动、普通移动的奖励设计
+- 路径可视化前所需的网格渲染
+"""
+
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple
 
@@ -12,13 +21,19 @@ State = Tuple[int, int]
 
 @dataclass
 class RewardConfig:
+    """集中保存环境中的三类奖励配置。"""
+
     step: float = -1.0
     invalid: float = -5.0
     goal: float = 50.0
 
 
 class GridWorldEnv:
-    """Simple deterministic grid environment for shortest-path learning."""
+    """用于最短路径学习的确定性网格环境。
+
+    状态为 `(row, col)`，动作为上下左右四个离散动作。
+    若动作导致越界或撞上障碍，则智能体留在原地并受到非法移动惩罚。
+    """
 
     ACTIONS = {
         0: (-1, 0),  # up
@@ -55,18 +70,33 @@ class GridWorldEnv:
         self.steps = 0
 
     def reset(self) -> State:
+        """重置到起点并返回初始状态。"""
+
         self.state = self.start
         self.steps = 0
         return self.state
 
     def in_bounds(self, state: State) -> bool:
+        """检查状态是否仍位于网格边界内。"""
+
         r, c = state
         return 0 <= r < self.rows and 0 <= c < self.cols
 
     def is_blocked(self, state: State) -> bool:
+        """检查状态是否是障碍物位置。"""
+
         return state in self.obstacles
 
     def step(self, action: Action) -> Tuple[State, float, bool, Dict[str, bool]]:
+        """执行一步环境转移。
+
+        返回：
+        - next_state: 执行动作后的状态
+        - reward: 本步即时奖励
+        - done: 当前 episode 是否结束
+        - info: 补充标记，说明是否非法移动、是否到达目标、是否触发步数上限
+        """
+
         if action not in self.ACTIONS:
             raise ValueError(f"invalid action: {action}")
 
@@ -100,6 +130,8 @@ class GridWorldEnv:
         return next_state, reward, done, info
 
     def render_grid(self, path: Optional[List[State]] = None) -> np.ndarray:
+        """将当前地图与可选路径编码成整数网格，供可视化模块绘图。"""
+
         grid = np.zeros((self.rows, self.cols), dtype=np.int32)
         for r, c in self.obstacles:
             grid[r, c] = 1

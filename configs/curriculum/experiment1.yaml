@@ -1,0 +1,138 @@
+seed_list:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+
+shared_env:
+  rows: 10
+  cols: 10
+  start: [0, 0]
+  goal: [9, 9]
+  rewards:
+    step: -1
+    invalid: -5
+    goal: 50
+  max_steps: 150
+
+agent:
+  alpha: 0.1
+  gamma: 0.95
+  epsilon: 1.0
+  epsilon_min: 0.05
+  epsilon_decay: 0.995
+
+evaluation:
+  eval_every_episodes: 100
+  checkpoint_eval_episodes: 50
+  final_eval_episodes: 200
+
+strategies:
+  direct_l4:
+    level: level4
+    episodes: 3500
+  curriculum_transfer:
+    phases:
+      - level: level1
+        episodes: 500
+      - level: level2
+        episodes: 500
+      - level: level3
+        episodes: 500
+      - level: level4
+        episodes: 2000
+
+maps:
+  level1:
+    obstacles:
+      - [1, 3]
+      - [2, 3]
+      - [3, 3]
+      - [5, 1]
+      - [5, 2]
+      - [5, 3]
+      - [6, 6]
+      - [7, 6]
+      - [2, 7]
+      - [3, 7]
+      - [8, 4]
+      - [8, 5]
+  level2:
+    obstacles:
+      - [1, 3]
+      - [2, 3]
+      - [3, 3]
+      - [5, 1]
+      - [5, 2]
+      - [5, 3]
+      - [6, 6]
+      - [7, 6]
+      - [2, 7]
+      - [3, 7]
+      - [8, 4]
+      - [8, 5]
+      - [1, 6]
+      - [2, 6]
+      - [3, 6]
+      - [4, 6]
+      - [6, 3]
+      - [7, 3]
+  level3:
+    obstacles:
+      - [1, 3]
+      - [2, 3]
+      - [3, 3]
+      - [5, 1]
+      - [5, 2]
+      - [5, 3]
+      - [6, 6]
+      - [7, 6]
+      - [2, 7]
+      - [3, 7]
+      - [8, 4]
+      - [8, 5]
+      - [1, 6]
+      - [2, 6]
+      - [3, 6]
+      - [4, 6]
+      - [6, 3]
+      - [7, 3]
+      - [1, 8]
+      - [2, 8]
+      - [4, 1]
+      - [4, 2]
+      - [6, 8]
+      - [7, 8]
+  level4:
+    obstacles:
+      - [1, 3]
+      - [2, 3]
+      - [3, 3]
+      - [5, 1]
+      - [5, 2]
+      - [5, 3]
+      - [6, 6]
+      - [7, 6]
+      - [2, 7]
+      - [3, 7]
+      - [8, 4]
+      - [8, 5]
+      - [1, 6]
+      - [2, 6]
+      - [3, 6]
+      - [4, 6]
+      - [6, 3]
+      - [7, 3]
+      - [1, 8]
+      - [2, 8]
+      - [4, 1]
+      - [4, 2]
+      - [6, 8]
+      - [7, 8]
+      - [3, 1]
+      - [3, 2]
+      - [4, 8]
+      - [5, 8]
+      - [7, 1]
+      - [7, 2]

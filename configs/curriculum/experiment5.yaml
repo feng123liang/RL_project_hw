@@ -1,0 +1,406 @@
+seed_list:
+- 42
+- 43
+- 44
+- 45
+- 46
+shared_env:
+  rows: 8
+  cols: 8
+  start:
+  - 0
+  - 0
+  goal:
+  - 7
+  - 6
+  phase_cycle: 4
+  hazard_active_phases:
+  - 0
+  - 1
+  rewards:
+    step: -0.2
+    invalid: -0.75
+    hazard: -4.0
+    bonus: 2.0
+    goal: 20.0
+agent:
+  alpha: 0.15
+  gamma: 0.95
+  epsilon: 1.0
+  epsilon_min: 0.05
+  epsilon_decay: 0.997
+evaluation:
+  eval_every_episodes: 50
+  checkpoint_eval_episodes: 50
+  final_eval_episodes: 200
+strategies:
+  direct_l4:
+    level: level4
+    episodes: 2000
+  curriculum_transfer:
+    phases:
+    - level: level1
+      episodes: 100
+    - level: level2
+      episodes: 100
+    - level: level3
+      episodes: 50
+    - level: level4
+      episodes: 1750
+  curriculum_transfer_reset_epsilon:
+    phase_start_epsilon_overrides:
+      level4: 0.2
+    phases:
+    - level: level1
+      episodes: 100
+    - level: level2
+      episodes: 100
+    - level: level3
+      episodes: 50
+    - level: level4
+      episodes: 1750
+levels:
+  level1:
+    free_cells:
+    - - 0
+      - 0
+    - - 0
+      - 1
+    - - 0
+      - 2
+    - - 0
+      - 5
+    - - 0
+      - 6
+    - - 0
+      - 7
+    - - 1
+      - 0
+    - - 1
+      - 1
+    - - 1
+      - 2
+    - - 1
+      - 5
+    - - 1
+      - 7
+    - - 2
+      - 0
+    - - 2
+      - 1
+    - - 2
+      - 2
+    - - 2
+      - 3
+    - - 2
+      - 4
+    - - 2
+      - 5
+    - - 2
+      - 7
+    - - 3
+      - 0
+    - - 3
+      - 1
+    - - 3
+      - 2
+    - - 3
+      - 3
+    - - 3
+      - 4
+    - - 3
+      - 6
+    - - 3
+      - 7
+    - - 4
+      - 3
+    - - 5
+      - 3
+    - - 5
+      - 4
+    - - 5
+      - 5
+    - - 6
+      - 5
+    - - 6
+      - 6
+    - - 7
+      - 6
+    key_cells:
+    - - 3
+      - 6
+    door_cells:
+    - - 4
+      - 3
+    hazard_cells: []
+    bonus_cells: []
+  level2:
+    free_cells:
+    - - 0
+      - 0
+    - - 1
+      - 0
+    - - 1
+      - 1
+    - - 1
+      - 2
+    - - 1
+      - 3
+    - - 1
+      - 4
+    - - 2
+      - 0
+    - - 2
+      - 2
+    - - 2
+      - 4
+    - - 2
+      - 5
+    - - 2
+      - 6
+    - - 2
+      - 7
+    - - 3
+      - 0
+    - - 3
+      - 2
+    - - 3
+      - 4
+    - - 3
+      - 7
+    - - 4
+      - 0
+    - - 4
+      - 2
+    - - 4
+      - 5
+    - - 4
+      - 6
+    - - 4
+      - 7
+    - - 5
+      - 0
+    - - 5
+      - 2
+    - - 5
+      - 5
+    - - 5
+      - 7
+    - - 6
+      - 0
+    - - 6
+      - 2
+    - - 6
+      - 3
+    - - 6
+      - 4
+    - - 6
+      - 5
+    - - 6
+      - 6
+    - - 6
+      - 7
+    - - 7
+      - 0
+    - - 7
+      - 1
+    - - 7
+      - 2
+    - - 7
+      - 6
+    key_cells: []
+    door_cells: []
+    hazard_cells:
+    - - 1
+      - 1
+    - - 3
+      - 4
+    - - 5
+      - 7
+    - - 6
+      - 3
+    bonus_cells: []
+  level3:
+    free_cells:
+    - - 0
+      - 0
+    - - 1
+      - 0
+    - - 1
+      - 2
+    - - 1
+      - 4
+    - - 1
+      - 5
+    - - 2
+      - 0
+    - - 2
+      - 2
+    - - 2
+      - 5
+    - - 2
+      - 7
+    - - 3
+      - 0
+    - - 3
+      - 2
+    - - 3
+      - 5
+    - - 3
+      - 7
+    - - 4
+      - 0
+    - - 4
+      - 1
+    - - 4
+      - 2
+    - - 4
+      - 3
+    - - 4
+      - 4
+    - - 4
+      - 5
+    - - 4
+      - 6
+    - - 4
+      - 7
+    - - 5
+      - 0
+    - - 5
+      - 4
+    - - 5
+      - 7
+    - - 6
+      - 0
+    - - 6
+      - 2
+    - - 6
+      - 3
+    - - 6
+      - 4
+    - - 6
+      - 5
+    - - 6
+      - 7
+    - - 7
+      - 0
+    - - 7
+      - 5
+    - - 7
+      - 6
+    key_cells: []
+    door_cells: []
+    hazard_cells: []
+    bonus_cells:
+    - - 1
+      - 4
+    - - 2
+      - 7
+    - - 6
+      - 2
+    - - 6
+      - 7
+    - - 7
+      - 0
+  level4:
+    free_cells:
+    - - 0
+      - 0
+    - - 0
+      - 1
+    - - 0
+      - 2
+    - - 0
+      - 3
+    - - 0
+      - 4
+    - - 0
+      - 5
+    - - 0
+      - 7
+    - - 1
+      - 4
+    - - 1
+      - 5
+    - - 1
+      - 7
+    - - 2
+      - 0
+    - - 2
+      - 1
+    - - 2
+      - 2
+    - - 2
+      - 3
+    - - 2
+      - 4
+    - - 2
+      - 5
+    - - 2
+      - 6
+    - - 2
+      - 7
+    - - 3
+      - 0
+    - - 3
+      - 4
+    - - 3
+      - 5
+    - - 3
+      - 7
+    - - 4
+      - 0
+    - - 4
+      - 3
+    - - 4
+      - 4
+    - - 4
+      - 6
+    - - 5
+      - 0
+    - - 5
+      - 1
+    - - 5
+      - 3
+    - - 5
+      - 4
+    - - 5
+      - 6
+    - - 6
+      - 2
+    - - 6
+      - 3
+    - - 6
+      - 4
+    - - 6
+      - 5
+    - - 6
+      - 6
+    - - 7
+      - 0
+    - - 7
+      - 1
+    - - 7
+      - 2
+    - - 7
+      - 3
+    - - 7
+      - 4
+    - - 7
+      - 6
+    key_cells:
+    - - 5
+      - 1
+    door_cells:
+    - - 3
+      - 4
+    hazard_cells:
+    - - 5
+      - 4
+    bonus_cells:
+    - - 0
+      - 7
+    - - 4
+      - 6
+    - - 7
+      - 0
