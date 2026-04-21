@@ -1,0 +1,493 @@
+{
+  "random_generation_examples": [
+    {
+      "instance": {
+        "rows": 6,
+        "cols": 6,
+        "start": [
+          5,
+          1
+        ],
+        "goal": [
+          3,
+          3
+        ],
+        "obstacles": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            2
+          ]
+        ],
+        "delivery_tasks": [
+          {
+            "pickup": [
+              1,
+              4
+            ],
+            "dropoff": [
+              0,
+              5
+            ]
+          }
+        ],
+        "max_steps": 144,
+        "split": "train",
+        "instance_id": "train_seed11_attempt1",
+        "generator_seed": 11,
+        "metadata": {
+          "obstacle_density": 0.13614658564796522,
+          "requested_task_count": 1,
+          "generation_attempt": 1
+        }
+      },
+      "oracle": {
+        "solvable": true,
+        "optimal_steps": 14,
+        "path": [
+          [
+            5,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "expanded_states": 74,
+        "visited_states": 83
+      },
+      "figures": {
+        "pdf": "/Users/chenhui/code/RL_final_project/generalization/results/generalization_smoke/figures/random_example_1.pdf"
+      }
+    },
+    {
+      "instance": {
+        "rows": 6,
+        "cols": 6,
+        "start": [
+          1,
+          4
+        ],
+        "goal": [
+          3,
+          4
+        ],
+        "obstacles": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ]
+        ],
+        "delivery_tasks": [
+          {
+            "pickup": [
+              4,
+              5
+            ],
+            "dropoff": [
+              2,
+              4
+            ]
+          },
+          {
+            "pickup": [
+              4,
+              2
+            ],
+            "dropoff": [
+              3,
+              3
+            ]
+          }
+        ],
+        "max_steps": 144,
+        "split": "train",
+        "instance_id": "train_seed12_attempt1",
+        "generator_seed": 12,
+        "metadata": {
+          "obstacle_density": 0.15259780021258043,
+          "requested_task_count": 2,
+          "generation_attempt": 1
+        }
+      },
+      "oracle": {
+        "solvable": true,
+        "optimal_steps": 14,
+        "path": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "expanded_states": 169,
+        "visited_states": 188
+      },
+      "figures": {
+        "pdf": "/Users/chenhui/code/RL_final_project/generalization/results/generalization_smoke/figures/random_example_2.pdf"
+      }
+    },
+    {
+      "instance": {
+        "rows": 6,
+        "cols": 6,
+        "start": [
+          3,
+          4
+        ],
+        "goal": [
+          5,
+          2
+        ],
+        "obstacles": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "delivery_tasks": [
+          {
+            "pickup": [
+              1,
+              1
+            ],
+            "dropoff": [
+              4,
+              4
+            ]
+          }
+        ],
+        "max_steps": 144,
+        "split": "train",
+        "instance_id": "train_seed13_attempt1",
+        "generator_seed": 13,
+        "metadata": {
+          "obstacle_density": 0.15482063943716295,
+          "requested_task_count": 1,
+          "generation_attempt": 1
+        }
+      },
+      "oracle": {
+        "solvable": true,
+        "optimal_steps": 14,
+        "path": [
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            2
+          ]
+        ],
+        "expanded_states": 74,
+        "visited_states": 76
+      },
+      "figures": {
+        "pdf": "/Users/chenhui/code/RL_final_project/generalization/results/generalization_smoke/figures/random_example_3.pdf"
+      }
+    }
+  ],
+  "manual_oracle_check": {
+    "instance": {
+      "rows": 4,
+      "cols": 4,
+      "start": [
+        0,
+        0
+      ],
+      "goal": [
+        3,
+        3
+      ],
+      "obstacles": [],
+      "delivery_tasks": [
+        {
+          "pickup": [
+            0,
+            3
+          ],
+          "dropoff": [
+            3,
+            0
+          ]
+        }
+      ],
+      "max_steps": 100,
+      "split": "unit",
+      "instance_id": "unit_manual",
+      "generator_seed": 0,
+      "metadata": {}
+    },
+    "oracle": {
+      "solvable": true,
+      "optimal_steps": 12,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "expanded_states": 40,
+      "visited_states": 43
+    },
+    "figures": {
+      "pdf": "/Users/chenhui/code/RL_final_project/generalization/results/generalization_smoke/figures/manual_oracle_check.pdf"
+    },
+    "checks": {
+      "pickup_before_dropoff": true,
+      "dropoff_before_goal_terminal": true
+    }
+  }
+}

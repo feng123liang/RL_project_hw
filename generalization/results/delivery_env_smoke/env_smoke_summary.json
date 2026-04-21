@@ -1,0 +1,2360 @@
+{
+  "instance": {
+    "rows": 6,
+    "cols": 6,
+    "start": [
+      2,
+      4
+    ],
+    "goal": [
+      0,
+      2
+    ],
+    "obstacles": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        5,
+        1
+      ]
+    ],
+    "delivery_tasks": [
+      {
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          1,
+          0
+        ]
+      },
+      {
+        "pickup": [
+          0,
+          5
+        ],
+        "dropoff": [
+          5,
+          4
+        ]
+      }
+    ],
+    "max_steps": 144,
+    "split": "smoke",
+    "instance_id": "smoke_seed101_attempt1",
+    "generator_seed": 101,
+    "metadata": {
+      "obstacle_density": 0.14802832069181843,
+      "requested_task_count": 2,
+      "generation_attempt": 1
+    }
+  },
+  "oracle": {
+    "solvable": true,
+    "optimal_steps": 20,
+    "path": [
+      [
+        2,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "expanded_states": 205,
+    "visited_states": 213
+  },
+  "rollout": [
+    {
+      "step": 0,
+      "position": [
+        2,
+        4
+      ],
+      "absolute_state": [
+        2,
+        4,
+        2,
+        0
+      ],
+      "feature_state": {
+        "row": 2,
+        "col": 4,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": -1,
+        "target_dc": -2,
+        "target_mode_pickup": 1,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 0,
+        "active_task": -1,
+        "delivered_mask": 0,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 2,
+          "col": 4,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": -1,
+          "target_dc": -2,
+          "target_mode_pickup": 1,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 0,
+          "active_task": -1,
+          "delivered_mask": 0,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "step": 1,
+      "position": [
+        1,
+        4
+      ],
+      "action": 0,
+      "action_name": "up",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "up"
+      },
+      "absolute_state": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "feature_state": {
+        "row": 1,
+        "col": 4,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": 0,
+        "target_dc": -2,
+        "target_mode_pickup": 1,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 0,
+        "active_task": -1,
+        "delivered_mask": 0,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 1,
+          "col": 4,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": 0,
+          "target_dc": -2,
+          "target_mode_pickup": 1,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 0,
+          "active_task": -1,
+          "delivered_mask": 0,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "step": 2,
+      "position": [
+        0,
+        4
+      ],
+      "action": 0,
+      "action_name": "up",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "up"
+      },
+      "absolute_state": [
+        0,
+        4,
+        2,
+        0
+      ],
+      "feature_state": {
+        "row": 0,
+        "col": 4,
+        "wall_up": 1,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": 1,
+        "target_dc": -2,
+        "target_mode_pickup": 1,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 0,
+        "active_task": -1,
+        "delivered_mask": 0,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 0,
+          "col": 4,
+          "wall_up": 1,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": 1,
+          "target_dc": -2,
+          "target_mode_pickup": 1,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 0,
+          "active_task": -1,
+          "delivered_mask": 0,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "step": 3,
+      "position": [
+        0,
+        5
+      ],
+      "action": 3,
+      "action_name": "right",
+      "reward": 0.8,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": true,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": 1,
+        "action_name": "right"
+      },
+      "absolute_state": [
+        0,
+        5,
+        1,
+        0
+      ],
+      "feature_state": {
+        "row": 0,
+        "col": 5,
+        "wall_up": 1,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 1,
+        "target_dr": 5,
+        "target_dc": -1,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 1,
+        "target_mode_goal": 0,
+        "active_task": 1,
+        "delivered_mask": 0,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 0,
+          "col": 5,
+          "wall_up": 1,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 1,
+          "target_dr": 5,
+          "target_dc": -1,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 1,
+          "target_mode_goal": 0,
+          "active_task": 1,
+          "delivered_mask": 0,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "step": 4,
+      "position": [
+        1,
+        5
+      ],
+      "action": 1,
+      "action_name": "down",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": 1,
+        "action_name": "down"
+      },
+      "absolute_state": [
+        1,
+        5,
+        1,
+        0
+      ],
+      "feature_state": {
+        "row": 1,
+        "col": 5,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 1,
+        "target_dr": 4,
+        "target_dc": -1,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 1,
+        "target_mode_goal": 0,
+        "active_task": 1,
+        "delivered_mask": 0,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            -1,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 1,
+          "col": 5,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 1,
+          "target_dr": 4,
+          "target_dc": -1,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 1,
+          "target_mode_goal": 0,
+          "active_task": 1,
+          "delivered_mask": 0,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "step": 5,
+      "position": [
+        2,
+        5
+      ],
+      "action": 1,
+      "action_name": "down",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": 1,
+        "action_name": "down"
+      },
+      "absolute_state": [
+        2,
+        5,
+        1,
+        0
+      ],
+      "feature_state": {
+        "row": 2,
+        "col": 5,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 1,
+        "target_dr": 3,
+        "target_dc": -1,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 1,
+        "target_mode_goal": 0,
+        "active_task": 1,
+        "delivered_mask": 0,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 2,
+          "col": 5,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 1,
+          "target_dr": 3,
+          "target_dc": -1,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 1,
+          "target_mode_goal": 0,
+          "active_task": 1,
+          "delivered_mask": 0,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "step": 6,
+      "position": [
+        3,
+        5
+      ],
+      "action": 1,
+      "action_name": "down",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": 1,
+        "action_name": "down"
+      },
+      "absolute_state": [
+        3,
+        5,
+        1,
+        0
+      ],
+      "feature_state": {
+        "row": 3,
+        "col": 5,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 1,
+        "target_dr": 2,
+        "target_dc": -1,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 1,
+        "target_mode_goal": 0,
+        "active_task": 1,
+        "delivered_mask": 0,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 3,
+          "col": 5,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 1,
+          "target_dr": 2,
+          "target_dc": -1,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 1,
+          "target_mode_goal": 0,
+          "active_task": 1,
+          "delivered_mask": 0,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "step": 7,
+      "position": [
+        4,
+        5
+      ],
+      "action": 1,
+      "action_name": "down",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": 1,
+        "action_name": "down"
+      },
+      "absolute_state": [
+        4,
+        5,
+        1,
+        0
+      ],
+      "feature_state": {
+        "row": 4,
+        "col": 5,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 1,
+        "target_dr": 1,
+        "target_dc": -1,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 1,
+        "target_mode_goal": 0,
+        "active_task": 1,
+        "delivered_mask": 0,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 4,
+          "col": 5,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 1,
+          "target_dr": 1,
+          "target_dc": -1,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 1,
+          "target_mode_goal": 0,
+          "active_task": 1,
+          "delivered_mask": 0,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "step": 8,
+      "position": [
+        5,
+        5
+      ],
+      "action": 1,
+      "action_name": "down",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": 1,
+        "action_name": "down"
+      },
+      "absolute_state": [
+        5,
+        5,
+        1,
+        0
+      ],
+      "feature_state": {
+        "row": 5,
+        "col": 5,
+        "wall_up": 0,
+        "wall_down": 1,
+        "wall_left": 0,
+        "wall_right": 1,
+        "target_dr": 0,
+        "target_dc": -1,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 1,
+        "target_mode_goal": 0,
+        "active_task": 1,
+        "delivered_mask": 0,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            1,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 5,
+          "col": 5,
+          "wall_up": 0,
+          "wall_down": 1,
+          "wall_left": 0,
+          "wall_right": 1,
+          "target_dr": 0,
+          "target_dc": -1,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 1,
+          "target_mode_goal": 0,
+          "active_task": 1,
+          "delivered_mask": 0,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "step": 9,
+      "position": [
+        5,
+        4
+      ],
+      "action": 2,
+      "action_name": "left",
+      "reward": 1.8,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": true,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "left"
+      },
+      "absolute_state": [
+        5,
+        4,
+        2,
+        2
+      ],
+      "feature_state": {
+        "row": 5,
+        "col": 4,
+        "wall_up": 0,
+        "wall_down": 1,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": -4,
+        "target_dc": -2,
+        "target_mode_pickup": 1,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 0,
+        "active_task": -1,
+        "delivered_mask": 2,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 5,
+          "col": 4,
+          "wall_up": 0,
+          "wall_down": 1,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": -4,
+          "target_dc": -2,
+          "target_mode_pickup": 1,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 0,
+          "active_task": -1,
+          "delivered_mask": 2,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "step": 10,
+      "position": [
+        4,
+        4
+      ],
+      "action": 0,
+      "action_name": "up",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "up"
+      },
+      "absolute_state": [
+        4,
+        4,
+        2,
+        2
+      ],
+      "feature_state": {
+        "row": 4,
+        "col": 4,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": -3,
+        "target_dc": -2,
+        "target_mode_pickup": 1,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 0,
+        "active_task": -1,
+        "delivered_mask": 2,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 4,
+          "col": 4,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": -3,
+          "target_dc": -2,
+          "target_mode_pickup": 1,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 0,
+          "active_task": -1,
+          "delivered_mask": 2,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "step": 11,
+      "position": [
+        3,
+        4
+      ],
+      "action": 0,
+      "action_name": "up",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "up"
+      },
+      "absolute_state": [
+        3,
+        4,
+        2,
+        2
+      ],
+      "feature_state": {
+        "row": 3,
+        "col": 4,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 1,
+        "wall_right": 0,
+        "target_dr": -2,
+        "target_dc": -2,
+        "target_mode_pickup": 1,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 0,
+        "active_task": -1,
+        "delivered_mask": 2,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 3,
+          "col": 4,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 1,
+          "wall_right": 0,
+          "target_dr": -2,
+          "target_dc": -2,
+          "target_mode_pickup": 1,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 0,
+          "active_task": -1,
+          "delivered_mask": 2,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "step": 12,
+      "position": [
+        2,
+        4
+      ],
+      "action": 0,
+      "action_name": "up",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "up"
+      },
+      "absolute_state": [
+        2,
+        4,
+        2,
+        2
+      ],
+      "feature_state": {
+        "row": 2,
+        "col": 4,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": -1,
+        "target_dc": -2,
+        "target_mode_pickup": 1,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 0,
+        "active_task": -1,
+        "delivered_mask": 2,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 2,
+          "col": 4,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": -1,
+          "target_dc": -2,
+          "target_mode_pickup": 1,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 0,
+          "active_task": -1,
+          "delivered_mask": 2,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "step": 13,
+      "position": [
+        1,
+        4
+      ],
+      "action": 0,
+      "action_name": "up",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "up"
+      },
+      "absolute_state": [
+        1,
+        4,
+        2,
+        2
+      ],
+      "feature_state": {
+        "row": 1,
+        "col": 4,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": 0,
+        "target_dc": -2,
+        "target_mode_pickup": 1,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 0,
+        "active_task": -1,
+        "delivered_mask": 2,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "task_features": {
+          "row": 1,
+          "col": 4,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": 0,
+          "target_dc": -2,
+          "target_mode_pickup": 1,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 0,
+          "active_task": -1,
+          "delivered_mask": 2,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "step": 14,
+      "position": [
+        1,
+        3
+      ],
+      "action": 2,
+      "action_name": "left",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "left"
+      },
+      "absolute_state": [
+        1,
+        3,
+        2,
+        2
+      ],
+      "feature_state": {
+        "row": 1,
+        "col": 3,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": 0,
+        "target_dc": -1,
+        "target_mode_pickup": 1,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 0,
+        "active_task": -1,
+        "delivered_mask": 2,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        ],
+        "task_features": {
+          "row": 1,
+          "col": 3,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": 0,
+          "target_dc": -1,
+          "target_mode_pickup": 1,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 0,
+          "active_task": -1,
+          "delivered_mask": 2,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "step": 15,
+      "position": [
+        1,
+        2
+      ],
+      "action": 2,
+      "action_name": "left",
+      "reward": 0.8,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": true,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": 0,
+        "action_name": "left"
+      },
+      "absolute_state": [
+        1,
+        2,
+        0,
+        2
+      ],
+      "feature_state": {
+        "row": 1,
+        "col": 2,
+        "wall_up": 0,
+        "wall_down": 1,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": 0,
+        "target_dc": -2,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 1,
+        "target_mode_goal": 0,
+        "active_task": 0,
+        "delivered_mask": 2,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "task_features": {
+          "row": 1,
+          "col": 2,
+          "wall_up": 0,
+          "wall_down": 1,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": 0,
+          "target_dc": -2,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 1,
+          "target_mode_goal": 0,
+          "active_task": 0,
+          "delivered_mask": 2,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "step": 16,
+      "position": [
+        1,
+        1
+      ],
+      "action": 2,
+      "action_name": "left",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": false,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": 0,
+        "action_name": "left"
+      },
+      "absolute_state": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "feature_state": {
+        "row": 1,
+        "col": 1,
+        "wall_up": 0,
+        "wall_down": 1,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": 0,
+        "target_dc": -1,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 1,
+        "target_mode_goal": 0,
+        "active_task": 0,
+        "delivered_mask": 2,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            -1,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            -1,
+            1,
+            0,
+            0,
+            1
+          ]
+        ],
+        "task_features": {
+          "row": 1,
+          "col": 1,
+          "wall_up": 0,
+          "wall_down": 1,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": 0,
+          "target_dc": -1,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 1,
+          "target_mode_goal": 0,
+          "active_task": 0,
+          "delivered_mask": 2,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "step": 17,
+      "position": [
+        1,
+        0
+      ],
+      "action": 2,
+      "action_name": "left",
+      "reward": 1.8,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": true,
+        "completed_all_deliveries": true,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "left"
+      },
+      "absolute_state": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "feature_state": {
+        "row": 1,
+        "col": 0,
+        "wall_up": 0,
+        "wall_down": 0,
+        "wall_left": 1,
+        "wall_right": 0,
+        "target_dr": -1,
+        "target_dc": 2,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 1,
+        "active_task": -1,
+        "delivered_mask": 3,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            -1,
+            -1,
+            0,
+            1,
+            1
+          ],
+          [
+            -1,
+            -1,
+            1,
+            0,
+            0
+          ]
+        ],
+        "task_features": {
+          "row": 1,
+          "col": 0,
+          "wall_up": 0,
+          "wall_down": 0,
+          "wall_left": 1,
+          "wall_right": 0,
+          "target_dr": -1,
+          "target_dc": 2,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 1,
+          "active_task": -1,
+          "delivered_mask": 3,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "step": 18,
+      "position": [
+        0,
+        0
+      ],
+      "action": 0,
+      "action_name": "up",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": true,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "up"
+      },
+      "absolute_state": [
+        0,
+        0,
+        2,
+        3
+      ],
+      "feature_state": {
+        "row": 0,
+        "col": 0,
+        "wall_up": 1,
+        "wall_down": 0,
+        "wall_left": 1,
+        "wall_right": 0,
+        "target_dr": 0,
+        "target_dc": 2,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 1,
+        "active_task": -1,
+        "delivered_mask": 3,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            -1,
+            -1,
+            0,
+            1,
+            1
+          ]
+        ],
+        "task_features": {
+          "row": 0,
+          "col": 0,
+          "wall_up": 1,
+          "wall_down": 0,
+          "wall_left": 1,
+          "wall_right": 0,
+          "target_dr": 0,
+          "target_dc": 2,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 1,
+          "active_task": -1,
+          "delivered_mask": 3,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "step": 19,
+      "position": [
+        0,
+        1
+      ],
+      "action": 3,
+      "action_name": "right",
+      "reward": -0.2,
+      "done": false,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": true,
+        "reached_goal": false,
+        "success": false,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "right"
+      },
+      "absolute_state": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "feature_state": {
+        "row": 0,
+        "col": 1,
+        "wall_up": 1,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": 0,
+        "target_dc": 1,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 1,
+        "active_task": -1,
+        "delivered_mask": 3,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            -1,
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "task_features": {
+          "row": 0,
+          "col": 1,
+          "wall_up": 1,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": 0,
+          "target_dc": 1,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 1,
+          "active_task": -1,
+          "delivered_mask": 3,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "step": 20,
+      "position": [
+        0,
+        2
+      ],
+      "action": 3,
+      "action_name": "right",
+      "reward": 4.8,
+      "done": true,
+      "info": {
+        "invalid_move": false,
+        "picked_up": false,
+        "dropped_off": false,
+        "completed_all_deliveries": true,
+        "reached_goal": true,
+        "success": true,
+        "time_limit": false,
+        "active_task": -1,
+        "action_name": "right"
+      },
+      "absolute_state": [
+        0,
+        2,
+        2,
+        3
+      ],
+      "feature_state": {
+        "row": 0,
+        "col": 2,
+        "wall_up": 1,
+        "wall_down": 0,
+        "wall_left": 0,
+        "wall_right": 0,
+        "target_dr": 0,
+        "target_dc": 0,
+        "target_mode_pickup": 0,
+        "target_mode_dropoff": 0,
+        "target_mode_goal": 1,
+        "active_task": -1,
+        "delivered_mask": 3,
+        "task_count": 2
+      },
+      "patch_state": {
+        "patch": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0
+          ]
+        ],
+        "task_features": {
+          "row": 0,
+          "col": 2,
+          "wall_up": 1,
+          "wall_down": 0,
+          "wall_left": 0,
+          "wall_right": 0,
+          "target_dr": 0,
+          "target_dc": 0,
+          "target_mode_pickup": 0,
+          "target_mode_dropoff": 0,
+          "target_mode_goal": 1,
+          "active_task": -1,
+          "delivered_mask": 3,
+          "task_count": 2
+        }
+      },
+      "action_mask": [
+        0,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "checks": {
+    "oracle_rollout_success": true,
+    "completed_all_deliveries": true,
+    "goal_reached": true,
+    "final_step_count_matches_optimal": true
+  },
+  "figures": {
+    "pdf": "/Users/chenhui/code/RL_final_project/generalization/results/delivery_env_smoke/figures/delivery_env_oracle_rollout.pdf"
+  }
+}
